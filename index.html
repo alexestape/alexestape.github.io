@@ -1,1 +1,76 @@
-hello there
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String and Button Grid</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .grid-row {
+        display: contents;
+      }
+      .text {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      .button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+      .button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text and Link Grid</h1>
+
+    <div class="grid-container">
+      <div class="grid-row">
+        <div class="text">Example String 1</div>
+        <div
+          class="button"
+          onclick="window.location.href='https://example.com/1'"
+        >
+          Go
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="text">Example String 2</div>
+        <div
+          class="button"
+          onclick="window.location.href='https://example.com/2'"
+        >
+          Go
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="text">Example String 3</div>
+        <div
+          class="button"
+          onclick="window.location.href='https://example.com/3'"
+        >
+          Go
+        </div>
+      </div>
+      <!-- Add more items here as needed -->
+    </div>
+  </body>
+</html>
