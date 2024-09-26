@@ -32,7 +32,7 @@ const myObject = {
     item2: {
       key1: "string16",
       key2: "string17",
-      key3: "string18",
+      key3: "stringtest",
     },
   },
 };
