@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from "react";
+import { ThemeProvider, useTheme } from "./ThemeContext";
+import GridComponent from "./GridComponent";
+import LightBulbButton from "./LightBulbButton";
 
-function App() {
+const ThemedApp = () => {
+  const { isDarkMode } = useTheme();
+
+  const appStyles = {
+    backgroundColor: isDarkMode ? "#333" : "#fff",
+    color: isDarkMode ? "#fff" : "#000",
+    height: "100vh",
+    textAlign: "center",
+    padding: "20px",
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={appStyles}>
+      <h1>Alexandre Estapé Carnicer</h1>
+      <LightBulbButton />
+      <GridComponent text="Name of the grid" />
     </div>
   );
-}
+};
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <ThemedApp />
+    </ThemeProvider>
+  );
+};
 
 export default App;
