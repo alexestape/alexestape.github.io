@@ -1,4 +1,4 @@
-export const allData = {
+export const data = {
   "About me": {
     Socials: [
       {
@@ -11,13 +11,13 @@ export const allData = {
         name: "Facebook",
         link: "https://www.facebook.com",
         textColor: "white",
-        buttonColor: "red",
+        buttonColor: "blue",
       },
       {
         name: "Twitter",
         link: "https://www.twitter.com",
         textColor: "white",
-        buttonColor: "red",
+        buttonColor: "orange",
       },
     ],
     Socials2: [
@@ -25,19 +25,19 @@ export const allData = {
         name: "Gooogle",
         link: "https://www.youtube.com",
         textColor: "green",
-        buttonColor: "red",
+        buttonColor: "green",
       },
       {
         name: "Facebook",
         link: "https://www.facebook.com",
         textColor: "white",
-        buttonColor: "red",
+        buttonColor: "gray",
       },
       {
         name: "Twitter",
         link: "https://www.twitter.com",
         textColor: "white",
-        buttonColor: "red",
+        buttonColor: "gray",
       },
     ],
   },

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ThemeProvider, useTheme } from "./ThemeContext";
-import { colors } from "./assets/color_styles";
+import { useTheme } from "./ThemeContext";
+import { colors } from "../data/buttonColor";
 
 const GridComponent = ({ nameGrid, data }) => {
   const { isDarkMode } = useTheme();
@@ -8,6 +8,7 @@ const GridComponent = ({ nameGrid, data }) => {
   const handleButtonClick = (link) => {
     window.open(link, "_blank");
   };
+
   return (
     <div style={styles.grid}>
       <div style={styles.title}>{nameGrid}</div>
@@ -48,8 +49,8 @@ const HoverButton = ({ color, onClick }) => {
           ? isDarkMode
             ? hoverColorDark
             : hoverColorLight
-          : unhoverColor, // Use the hover color when hovered
-      }} // put the styles in an object so that we only need to put the color in the line -> seems reasonable to me
+          : unhoverColor,
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}

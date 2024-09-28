@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { ThemeProvider, useTheme } from "./ThemeContext";
-import GridComponent from "./GridComponent";
-import LightBulbButton from "./LightBulbButton";
-import { allData } from "./assets/allData";
-import ImageLink from "./imageComponent";
-import { profiles } from "./assets/profiles";
+import { ThemeProvider, useTheme } from "./components/ThemeContext";
+import GridComponent from "./components/GridComponent";
+import DarkModeComponent from "./components/DarkModeComponent";
+import { data } from "./data/data";
+import ProfileComponent from "./components/ProfileComponent";
+import { profiles } from "./data/profiles";
 
 const ThemedApp = () => {
   const { isDarkMode } = useTheme();
@@ -48,15 +48,15 @@ const ThemedApp = () => {
         Alexandre Estapé
         <div style={{ marginLeft: "24px" }}>
           {Object.entries(profiles).map(([key, { src, link }]) => (
-            <ImageLink key={key} src={src} link={link} />
+            <ProfileComponent key={key} src={src} link={link} />
           ))}
-          <LightBulbButton />
+          <DarkModeComponent />
         </div>
       </div>
 
       {/* Buttons for each big category */}
       <div style={{ marginBottom: "20px", marginTop: "20px" }}>
-        {Object.keys(allData).map((category) => (
+        {Object.keys(data).map((category) => (
           <button
             style={styleButtonlvl1}
             key={category}
@@ -70,7 +70,7 @@ const ThemedApp = () => {
       {/* Conditionally render grids for the selected category */}
       {selectedCategory && (
         <div style={{ display: "flex" }}>
-          {Object.entries(allData[selectedCategory]).map(
+          {Object.entries(data[selectedCategory]).map(
             ([gridName, gridData]) => (
               <GridComponent
                 key={gridName}

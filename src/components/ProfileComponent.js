@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageLink = ({ src, link }) => {
+const ProfileComponent = ({ src, link }) => {
   const handleImageClick = () => {
     window.open(link, "_blank");
   };
@@ -9,9 +9,9 @@ const ImageLink = ({ src, link }) => {
     <img
       src={src}
       onClick={handleImageClick}
+      alt={""}
       style={{
         cursor: "default",
-        width: "100%",
         maxWidth: "300px",
         width: "24px",
         marginRight: "8px",
@@ -20,4 +20,4 @@ const ImageLink = ({ src, link }) => {
   );
 };
 
-export default ImageLink;
+export default ProfileComponent;

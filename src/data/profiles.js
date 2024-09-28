@@ -1,7 +1,7 @@
-import srcCV from "./CV.png";
-import srcGithub from "./logoGithub.svg";
-import srcLinkedin from "./logoLinkedin.png";
-import srcCodeforces from "./logoCodeforces.png";
+import srcCV from "../assets/CV.png";
+import srcGithub from "../assets/logoGithub.svg";
+import srcLinkedin from "../assets/logoLinkedin.png";
+import srcCodeforces from "../assets/logoCodeforces.png";
 
 export const profiles = {
   CV: {
