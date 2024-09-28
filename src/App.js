@@ -5,7 +5,6 @@ import LightBulbButton from "./LightBulbButton";
 import { allData } from "./assets/allData";
 import ImageLink from "./imageComponent";
 import { profiles } from "./assets/profiles";
-import styled from "styled-components";
 
 const ThemedApp = () => {
   const { isDarkMode } = useTheme();
