@@ -1,35 +1,13 @@
 import React, { useState } from "react";
 import { ThemeProvider, useTheme } from "./ThemeContext";
+import { colors } from "./assets/color_styles";
 
-const GridComponent = ({ text }) => {
-  const data = [
-    {
-      name: "Google",
-      link: "https://www.google.com",
-      color: "orange",
-      hoverColorLight: "black",
-      hoverColorDark: "white",
-    },
-    {
-      name: "Facebook",
-      link: "https://www.facebook.com",
-      color: "lightgreen",
-      hoverColorLight: "#e91e63",
-      hoverColorDark: "#e91e63",
-    },
-    {
-      name: "Twitter",
-      link: "https://www.twitter.com",
-      color: "lightcoral",
-      hoverColorLight: "red",
-      hoverColorDark: "#e91e63",
-    },
-  ];
+const GridComponent = ({ text, data }) => {
+  const { isDarkMode } = useTheme();
 
   const handleButtonClick = (link) => {
     window.open(link, "_blank");
   };
-  // can we get here the Darkmode constant? idk
   return (
     <div style={styles.grid}>
       <div style={styles.title}>{text}</div>
@@ -39,13 +17,17 @@ const GridComponent = ({ text }) => {
           style={{
             ...styles.gridItem,
             ...(index === data.length - 1 ? styles.lastGridItem : {}),
+            ...(item.textColor !== "white"
+              ? {
+                  color: item.textColor,
+                  borderColor: isDarkMode ? "white" : "black",
+                }
+              : {}),
           }}
         >
           {item.name}
           <HoverButton
-            color={item.color}
-            hoverColorDark={item.hoverColorDark} // Pass the hover color
-            hoverColorLight={item.hoverColorLight} // Pass the hover color
+            color={item.buttonColor}
             onClick={() => handleButtonClick(item.link)}
           />
         </div>
@@ -54,10 +36,10 @@ const GridComponent = ({ text }) => {
   );
 };
 
-const HoverButton = ({ color, hoverColorDark, hoverColorLight, onClick }) => {
+const HoverButton = ({ color, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { isDarkMode } = useTheme();
-
+  const { unhoverColor, hoverColorDark, hoverColorLight } = colors[color];
   return (
     <button
       style={{
@@ -66,7 +48,7 @@ const HoverButton = ({ color, hoverColorDark, hoverColorLight, onClick }) => {
           ? isDarkMode
             ? hoverColorDark
             : hoverColorLight
-          : color, // Use the hover color when hovered
+          : unhoverColor, // Use the hover color when hovered
       }} // put the styles in an object so that we only need to put the color in the line -> seems reasonable to me
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
