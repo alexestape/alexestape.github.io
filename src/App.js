@@ -1,10 +1,11 @@
-// App.js
 import React from "react";
 import { ThemeProvider, useTheme } from "./ThemeContext";
 import GridComponent from "./GridComponent";
 import LightBulbButton from "./LightBulbButton";
 import { data } from "./assets/data";
-import image from "./assets/githublogo.svg";
+import ImageLink from "./imageComponent";
+import { profiles } from "./assets/profiles";
+
 const ThemedApp = () => {
   const { isDarkMode } = useTheme();
 
@@ -16,25 +17,22 @@ const ThemedApp = () => {
   };
 
   const titleStyles = {
+    display: "flex",
+    alignItems: "flex-end",
     fontFamily: "'Lato', sans-serif",
     fontWeight: "lighter",
     fontSize: "72px",
-    padding: "0px",
-    margin: "0px",
     paddingLeft: "20px",
-    paddingRight: "20px",
+    marginRight: "0px",
   };
 
   return (
     <div style={appStyles}>
       <div style={titleStyles}>
         Alexandre Estapé
-        <a href="https://github.com/alexestape" target="_blank">
-          <img src={image} />
-        </a>
-        <a href="https://github.com/alexestape" target="_blank">
-          <img src={image} />
-        </a>
+        {Object.entries(profiles).map(([key, { src, link }]) => (
+          <ImageLink key={key} src={src} link={link} />
+        ))}
         <LightBulbButton />
       </div>
       <GridComponent text="Name of the grid" data={data} />

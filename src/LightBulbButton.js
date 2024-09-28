@@ -13,7 +13,7 @@ const LightBulbButton = () => {
       onClick={toggleTheme}
       style={{
         width: "25px",
-        marginLeft: "20px",
+        marginLeft: "10px",
       }}
     />
   );
