@@ -12,8 +12,7 @@ const LightBulbButton = () => {
       alt={isDarkMode ? "Turn Off" : "Turn On"}
       onClick={toggleTheme}
       style={{
-        width: "25px",
-        marginLeft: "10px",
+        width: "24px",
       }}
     />
   );

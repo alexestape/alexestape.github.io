@@ -18,3 +18,30 @@ export const data = [
     buttonColor: "red",
   },
 ];
+
+/* const allData = {
+  About_me: {
+    name_of_grid: "Socials",
+    data: [
+      {
+        name: "Gooogle",
+        link: "https://www.youtube.com",
+        textColor: "green",
+        buttonColor: "red",
+      },
+      {
+        name: "Facebook",
+        link: "https://www.facebook.com",
+        textColor: "white",
+        buttonColor: "red",
+      },
+      {
+        name: "Twitter",
+        link: "https://www.twitter.com",
+        textColor: "white",
+        buttonColor: "red",
+      },
+    ],
+  },
+};
+*/

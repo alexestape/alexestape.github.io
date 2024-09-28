@@ -14,7 +14,7 @@ const ImageLink = ({ src, link }) => {
         width: "100%",
         maxWidth: "300px",
         width: "24px",
-        margin: "0px",
+        marginRight: "8px",
       }}
     />
   );

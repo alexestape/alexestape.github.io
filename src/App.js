@@ -23,17 +23,18 @@ const ThemedApp = () => {
     fontWeight: "lighter",
     fontSize: "72px",
     paddingLeft: "20px",
-    marginRight: "0px",
   };
 
   return (
     <div style={appStyles}>
       <div style={titleStyles}>
         Alexandre Estapé
-        {Object.entries(profiles).map(([key, { src, link }]) => (
-          <ImageLink key={key} src={src} link={link} />
-        ))}
-        <LightBulbButton />
+        <div style={{ marginLeft: "24px" }}>
+          {Object.entries(profiles).map(([key, { src, link }]) => (
+            <ImageLink key={key} src={src} link={link} />
+          ))}
+          <LightBulbButton />
+        </div>
       </div>
       <GridComponent text="Name of the grid" data={data} />
     </div>
