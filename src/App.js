@@ -8,17 +8,29 @@ const ThemedApp = () => {
   const { isDarkMode } = useTheme();
 
   const appStyles = {
-    backgroundColor: isDarkMode ? "#333" : "#fff",
+    backgroundColor: isDarkMode ? "#171717" : "#fff",
     color: isDarkMode ? "#fff" : "#000",
     height: "100vh",
-    textAlign: "center",
     padding: "20px",
+  };
+
+  const titleStyles = {
+    fontFamily: "'Lato', sans-serif",
+    fontWeight: "lighter",
+    fontSize: "72px",
+    padding: "0px",
+    margin: "0px",
+    paddingLeft: "20px",
+    paddingRight: "20px",
   };
 
   return (
     <div style={appStyles}>
-      <h1>Alexandre Estapé Carnicer</h1>
-      <LightBulbButton />
+      <div style={titleStyles}>
+        Alexandre Estapé
+        <LightBulbButton />
+      </div>
+
       <GridComponent text="Name of the grid" />
     </div>
   );

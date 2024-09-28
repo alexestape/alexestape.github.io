@@ -12,9 +12,8 @@ const LightBulbButton = () => {
       alt={isDarkMode ? "Turn Off" : "Turn On"}
       onClick={toggleTheme}
       style={{
-        width: "50px", // Adjust size as needed
-        cursor: "pointer",
-        //filter: isDarkMode ? "invert(100%)" : "none", // Optional: change image color for dark mode
+        width: "25px",
+        marginLeft: "20px",
       }}
     />
   );
