@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ThemeProvider, useTheme } from "./ThemeContext";
 import { colors } from "./assets/color_styles";
 
-const GridComponent = ({ text, data }) => {
+const GridComponent = ({ nameGrid, data }) => {
   const { isDarkMode } = useTheme();
 
   const handleButtonClick = (link) => {
@@ -10,7 +10,7 @@ const GridComponent = ({ text, data }) => {
   };
   return (
     <div style={styles.grid}>
-      <div style={styles.title}>{text}</div>
+      <div style={styles.title}>{nameGrid}</div>
       {data.map((item, index) => (
         <div
           key={index}
