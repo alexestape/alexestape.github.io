@@ -4,7 +4,7 @@ This project was bootttstrapped with THIS IS PAGES [Create React App](https://gi
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project direeectory, you can run:
 
 ### `npm start`
 
