@@ -1,13 +1,13 @@
 import React from "react";
 import { useTheme } from "./ThemeContext";
-import lightbulbImage from "../assets/lightbulb.jpg";
+import srcLightbulb from "../assets/images/lightbulb.jpg";
 
 const DarkModeComponent = () => {
   const { toggleTheme } = useTheme();
 
   return (
     <img
-      src={lightbulbImage}
+      src={srcLightbulb}
       onClick={toggleTheme}
       alt={""}
       style={{

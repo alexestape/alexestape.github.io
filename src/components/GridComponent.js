@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTheme } from "./ThemeContext";
-import { colors } from "../data/buttonColor";
+import { HoverButton } from "./HoverButton";
+import { Grid, GridTitle, GridItem } from "./styles";
 
-const GridComponent = ({ nameGrid, data }) => {
+const GridComponent = ({ gridTitle, data }) => {
   const { isDarkMode } = useTheme();
 
   const handleButtonClick = (link) => {
@@ -10,83 +11,24 @@ const GridComponent = ({ nameGrid, data }) => {
   };
 
   return (
-    <div style={styles.grid}>
-      <div style={styles.title}>{nameGrid}</div>
+    <Grid>
+      <GridTitle>{gridTitle}</GridTitle>
       {data.map((item, index) => (
-        <div
+        <GridItem
           key={index}
-          style={{
-            ...styles.gridItem,
-            ...(index === data.length - 1 ? styles.lastGridItem : {}),
-            ...(item.textColor !== "white"
-              ? {
-                  color: item.textColor,
-                  borderColor: isDarkMode ? "white" : "black",
-                }
-              : {}),
-          }}
+          isLast={index === data.length - 1}
+          textColor={item.textColor}
+          isDarkMode={isDarkMode}
         >
           {item.name}
           <HoverButton
             color={item.buttonColor}
             onClick={() => handleButtonClick(item.link)}
           />
-        </div>
+        </GridItem>
       ))}
-    </div>
+    </Grid>
   );
-};
-
-const HoverButton = ({ color, onClick }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const { isDarkMode } = useTheme();
-  const { unhoverColor, hoverColorDark, hoverColorLight } = colors[color];
-  return (
-    <button
-      style={{
-        ...styles.button,
-        backgroundColor: isHovered
-          ? isDarkMode
-            ? hoverColorDark
-            : hoverColorLight
-          : unhoverColor,
-      }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
-    ></button>
-  );
-};
-
-const styles = {
-  grid: {
-    display: "block",
-    width: "310px",
-    padding: "30px",
-  },
-  lastGridItem: {
-    borderBottom: "1px solid",
-  },
-  title: {
-    display: "inline-block",
-    border: "1px solid",
-    padding: "5px",
-    marginRight: "0px",
-    borderBottom: "0px",
-  },
-  gridItem: {
-    border: "1px solid",
-    borderBottom: "0px",
-    padding: "5px",
-  },
-  button: {
-    height: "20px",
-    width: "20px",
-    float: "right",
-    borderRadius: "5px",
-    border: "0px",
-    cursor: "pointer",
-  },
 };
 
 export default GridComponent;

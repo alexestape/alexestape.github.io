@@ -1,4 +1,4 @@
-export const colors = {
+export const buttonColors = {
   gray: {
     unhoverColor: "#a2a2a2",
     hoverColorDark: "#c2c2c2",
@@ -25,5 +25,3 @@ export const colors = {
     hoverColorLight: "#ffa600",
   },
 };
-
-// red, blue, orange, green, gray
