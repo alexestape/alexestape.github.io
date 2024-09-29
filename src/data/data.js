@@ -666,6 +666,24 @@ export const data = {
   Organization: {
     Organization: [
       {
+        name: "Secret shifters",
+        link: "https://docs.google.com/document/d/129JGmPGsQDug2_5T1c1ZorXYrYQT8f-PDmUID9Qk4PM/edit?usp=drive_link",
+        textColor: "white",
+        buttonColor: "blue",
+      },
+      {
+        name: "To do list",
+        link: "https://docs.google.com/document/d/1mA3jtQXlsAfKLCRjQw3ipnj5HhB-Fnov_Y0c6r-uDI0/edit?usp=drive_link",
+        textColor: "white",
+        buttonColor: "blue",
+      },
+      {
+        name: "Sessions",
+        link: "https://docs.google.com/document/d/1JJnz7jly8YRVMZ-BPXY1X4JYsyC-ZaIMmQDVqAPCZro/edit?usp=drive_link",
+        textColor: "white",
+        buttonColor: "blue",
+      },
+      {
         name: "20k before 2026",
         link: "https://docs.google.com/document/d/1alfmu2qp0ib_IhYmen8n7sOa_oHpTgZ8HkTYEtKqj_Y/edit?usp=drive_link",
         textColor: "white",
@@ -678,26 +696,8 @@ export const data = {
         buttonColor: "blue",
       },
       {
-        name: "Secret shifters",
-        link: "https://docs.google.com/document/d/129JGmPGsQDug2_5T1c1ZorXYrYQT8f-PDmUID9Qk4PM/edit?usp=drive_link",
-        textColor: "white",
-        buttonColor: "blue",
-      },
-      {
-        name: "Sessions",
-        link: "https://docs.google.com/document/d/1JJnz7jly8YRVMZ-BPXY1X4JYsyC-ZaIMmQDVqAPCZro/edit?usp=drive_link",
-        textColor: "white",
-        buttonColor: "blue",
-      },
-      {
         name: "Songs to download",
         link: "https://docs.google.com/document/d/1hbdnFMw1Y5fWPipmsAAtDm9wX_6y6eaj4VkRXIX5M-Y/edit?usp=drive_link",
-        textColor: "white",
-        buttonColor: "blue",
-      },
-      {
-        name: "To do list",
-        link: "https://docs.google.com/document/d/1mA3jtQXlsAfKLCRjQw3ipnj5HhB-Fnov_Y0c6r-uDI0/edit?usp=drive_link",
         textColor: "white",
         buttonColor: "blue",
       },
