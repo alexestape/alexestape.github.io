@@ -21,17 +21,21 @@ const ThemedApp = () => {
     setSelectedCategory(category === selectedCategory ? null : category);
   };
 
+  const isMobile = window.innerWidth <= 800;
+
   return (
     <AppContainer theme={{ isDarkMode }}>
-      <NameAndProfiles>
-        Alexandre Estapé
-        <div style={{ marginLeft: "24px" }}>
-          {Object.entries(profiles).map(([key, { src, link }]) => (
-            <Profile key={key} src={src} link={link} />
-          ))}
-          <DarkMode />
-        </div>
-      </NameAndProfiles>
+      {!isMobile && (
+        <NameAndProfiles>
+          Alexandre Estapé
+          <div style={{ marginLeft: "24px" }}>
+            {Object.entries(profiles).map(([key, { src, link }]) => (
+              <Profile key={key} src={src} link={link} />
+            ))}
+            <DarkMode />
+          </div>
+        </NameAndProfiles>
+      )}
 
       <CategoryButtonContainer>
         {Object.keys(data).map((category) => (
@@ -47,7 +51,7 @@ const ThemedApp = () => {
 
       {/* Conditionally render grids for the selected category */}
       {selectedCategory && (
-        <GridContainer>
+        <GridContainer isMobile={isMobile}>
           {Object.entries(data[selectedCategory]).map(
             ([gridName, gridData]) => (
               <GridComponent

@@ -80,7 +80,7 @@ const CategoryButtonContainer = styled.div`
 `;
 
 const GridContainer = styled.div`
-  display: flex;
+  display: ${({ isMobile }) => (isMobile ? "block" : "flex")};
 `;
 
 export {
