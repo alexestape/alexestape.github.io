@@ -474,6 +474,12 @@ export const data = {
         textColor: "white",
         buttonColor: "blue",
       },
+      {
+        name: "The Secret",
+        link: "https://docs.google.com/document/d/1eJyIh3toi00Mwzw9eYDVIGB-hVT0cI4QoEMxmo_nL34/edit?usp=drive_link",
+        textColor: "white",
+        buttonColor: "blue",
+      },
     ],
     Running: [
       {
@@ -481,6 +487,30 @@ export const data = {
         link: "https://docs.google.com/document/d/1cS15Q6us_vXzMO4Se5K66Jfvjjt8ah-Z2neajbcRfOY/edit?usp=drive_link",
         textColor: "white",
         buttonColor: "blue",
+      },
+    ],
+    Photography: [
+      {
+        name: "Main album",
+        link: "https://photos.google.com/share/AF1QipMrtynLGKJhVrl7xx5zbc6xmoNjdqm0NhTgUxBgmOD3q4VYMCGBvY63DOWfiq2J-Q",
+        textColor: "white",
+        buttonColor: "orange",
+      },
+    ],
+    Journaling: [
+      {
+        name: "Personal diary",
+        link: "https://docs.google.com/document/d/1XAb7YxnPDCrGC0OXgSZr0syH_OC4likmcQPnGTZRv9s/edit?usp=drive_link",
+        textColor: "white",
+        buttonColor: "blue",
+      },
+    ],
+    Other: [
+      {
+        name: "10ff",
+        link: "https://10fastfingers.com/user/3983045/",
+        textColor: "white",
+        buttonColor: "gray",
       },
     ],
     Tracking: [
