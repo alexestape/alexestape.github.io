@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/static/js/main.bfefcdb8.js",
+    "static/media/CV.png": "/static/media/CV.63b3734d66903bcd7d67.png",
+    "static/media/lightbulb.jpg": "/static/media/lightbulb.a0711b50c15fdebbc2c5.jpg",
+    "static/media/logoLinkedin.png": "/static/media/logoLinkedin.68ac41e1459436bfd38f.png",
+    "static/media/logoGithub.svg": "/static/media/logoGithub.75454bbe19eb776729dfdb1176aaa175.svg",
+    "index.html": "/index.html",
+    "main.bfefcdb8.js.map": "/static/js/main.bfefcdb8.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bfefcdb8.js"
+  ]
+}
