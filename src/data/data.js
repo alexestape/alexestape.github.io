@@ -690,7 +690,7 @@ export const data = {
         buttonColor: "blue",
       },
       {
-        name: "Ablutions",
+        name: "Features",
         link: "https://docs.google.com/document/d/1V7dJocmYRcyR4EoA79mSBBVdiVW66d_v9080mVbIXu0/edit?usp=drive_link",
         textColor: "white",
         buttonColor: "blue",
