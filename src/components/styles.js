@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Grid = styled.div`
   display: block;
-  width: 310px;
+  width: 380px;
   padding: 30px;
 `;
 
