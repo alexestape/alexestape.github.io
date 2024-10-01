@@ -4,7 +4,7 @@ export const data = {
       {
         name: "Linear Algebra",
         link: "https://drive.google.com/drive/folders/1RBQregwDFIaqvAynPGHBUkQAd1D3urJZ?usp=sharing",
-        textColor: "blue",
+        textColor: "#66b3ff",
         buttonColor: "gray",
       },
       {
